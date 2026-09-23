@@ -1,0 +1,185 @@
+/opt/software/MATLAB/R2019a/bin/matlab:行1335: lsb_release: 未找到命令
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+要开始，请键入 doc。
+有关产品信息，请访问 www.mathworks.com。
+ 
+
+
+%---------- hyperparameter configuration (start) ----------%
+1. log-normal coeff:  amplitude  correlation  threshold
+                        100         0.2         0.95
+2. MC FE method:  mesh_size   quadrature   traindata_size   testdata_size
+                  3.125e-02       7            5000             1000
+3. full-batch GD method:  step_size   number_iteratios   beta
+                             20             3000       1.0e-10             
+%---------- hyperparameter configuration (end) ----------%
+
+
+%---------- data_generator using KLE_normal (start) ----------%
+1. solving KL eigenvalue problem ...
+   total number of eigenpairs = 1089
+   truncation number = 166
+   cumulative energy ration >=  0.95
+   normal distributed random variables are used where randseed = 666
+   (modify randseed in generate_train_test_data.m if necessary)
+2. solving distributed control problem with pathwise control ...
+Starting parallel pool (parpool) using the 'local' profile ...
+Preserving jobs with IDs: 49 because they contain crash dump files.
+You can use 'delete(myCluster.Jobs)' to remove all jobs created with profile local. To create 'myCluster' use 'myCluster = parcluster('local')'.
+Connected to the parallel pool (number of workers: 12).
+
+ans = 
+
+ Pool - 属性: 
+
+            Connected: true
+           NumWorkers: 12
+              Cluster: local
+        AttachedFiles: {}
+    AutoAddClientPath: true
+          IdleTimeout: 30 minutes (30 minutes remaining)
+          SpmdEnabled: true
+
+2-1. preparing training dataset ...
+   iteration_index (live) = 1     iteration_objective (live) = 3.718e-01
+   iteration_index (live) = 100   iteration_objective (live) = 8.632e-02
+   iteration_index (live) = 200   iteration_objective (live) = 2.845e-02
+   iteration_index (live) = 300   iteration_objective (live) = 1.402e-02
+   iteration_index (live) = 400   iteration_objective (live) = 9.160e-03
+   iteration_index (live) = 500   iteration_objective (live) = 6.878e-03
+   iteration_index (live) = 600   iteration_objective (live) = 5.490e-03
+   iteration_index (live) = 700   iteration_objective (live) = 4.516e-03
+   iteration_index (live) = 800   iteration_objective (live) = 3.783e-03
+   iteration_index (live) = 900   iteration_objective (live) = 3.213e-03
+   iteration_index (live) = 1000   iteration_objective (live) = 2.761e-03
+   iteration_index (live) = 1100   iteration_objective (live) = 2.396e-03
+   iteration_index (live) = 1200   iteration_objective (live) = 2.100e-03
+   iteration_index (live) = 1300   iteration_objective (live) = 1.857e-03
+   iteration_index (live) = 1400   iteration_objective (live) = 1.655e-03
+   iteration_index (live) = 1500   iteration_objective (live) = 1.487e-03
+   iteration_index (live) = 1600   iteration_objective (live) = 1.346e-03
+   iteration_index (live) = 1700   iteration_objective (live) = 1.227e-03
+   iteration_index (live) = 1800   iteration_objective (live) = 1.125e-03
+   iteration_index (live) = 1900   iteration_objective (live) = 1.037e-03
+   iteration_index (live) = 2000   iteration_objective (live) = 9.620e-04
+   iteration_index (live) = 2100   iteration_objective (live) = 8.964e-04
+   iteration_index (live) = 2200   iteration_objective (live) = 8.390e-04
+   iteration_index (live) = 2300   iteration_objective (live) = 7.885e-04
+   iteration_index (live) = 2400   iteration_objective (live) = 7.437e-04
+   iteration_index (live) = 2500   iteration_objective (live) = 7.038e-04
+   iteration_index (live) = 2600   iteration_objective (live) = 6.681e-04
+   iteration_index (live) = 2700   iteration_objective (live) = 6.359e-04
+   iteration_index (live) = 2800   iteration_objective (live) = 6.068e-04
+   iteration_index (live) = 2900   iteration_objective (live) = 5.804e-04
+   iteration_index (live) = 3000   iteration_objective (live) = 5.562e-
+   elapsed time for finding path-ctrl on traindata = 402 minutes and 29.860575 seconds
+2-2. preparing testing dataset ...
+   iteration_index (live) = 1     iteration_objective (live) = 3.718e-01
+   iteration_index (live) = 100   iteration_objective (live) = 8.620e-02
+   iteration_index (live) = 200   iteration_objective (live) = 2.839e-02
+   iteration_index (live) = 300   iteration_objective (live) = 1.400e-02
+   iteration_index (live) = 400   iteration_objective (live) = 9.158e-03
+   iteration_index (live) = 500   iteration_objective (live) = 6.875e-03
+   iteration_index (live) = 600   iteration_objective (live) = 5.484e-03
+   iteration_index (live) = 700   iteration_objective (live) = 4.507e-03
+   iteration_index (live) = 800   iteration_objective (live) = 3.772e-03
+   iteration_index (live) = 900   iteration_objective (live) = 3.201e-03
+   iteration_index (live) = 1000   iteration_objective (live) = 2.748e-03
+   iteration_index (live) = 1100   iteration_objective (live) = 2.383e-03
+   iteration_index (live) = 1200   iteration_objective (live) = 2.087e-03
+   iteration_index (live) = 1300   iteration_objective (live) = 1.844e-03
+   iteration_index (live) = 1400   iteration_objective (live) = 1.643e-03
+   iteration_index (live) = 1500   iteration_objective (live) = 1.476e-03
+   iteration_index (live) = 1600   iteration_objective (live) = 1.335e-03
+   iteration_index (live) = 1700   iteration_objective (live) = 1.216e-03
+   iteration_index (live) = 1800   iteration_objective (live) = 1.115e-03
+   iteration_index (live) = 1900   iteration_objective (live) = 1.028e-03
+   iteration_index (live) = 2000   iteration_objective (live) = 9.527e-04
+   iteration_index (live) = 2100   iteration_objective (live) = 8.875e-04
+   iteration_index (live) = 2200   iteration_objective (live) = 8.305e-04
+   iteration_index (live) = 2300   iteration_objective (live) = 7.804e-04
+   iteration_index (live) = 2400   iteration_objective (live) = 7.360e-04
+   iteration_index (live) = 2500   iteration_objective (live) = 6.964e-04
+   iteration_index (live) = 2600   iteration_objective (live) = 6.610e-04
+   iteration_index (live) = 2700   iteration_objective (live) = 6.292e-04
+   iteration_index (live) = 2800   iteration_objective (live) = 6.004e-04
+   iteration_index (live) = 2900   iteration_objective (live) = 5.742e-04
+   iteration_index (live) = 3000   iteration_objective (live) = 5.503e-04
+   elapsed time for finding path-ctrl on testdata = 76 minutes and 34.655005 seconds
+3. save training and testing data (matrix form in mat format)
+
+4. save training and testing data (tensor form in mat format)
+%---------- data_generator using KLE_normal (end) ----------%
+
+
+%---------- baseline: rob_det_ctrl using KLE_normal (start) ----------%
+1. solve distributed control problem with robust deterministic control
+   parallel computing environment is initialized with CoreNum = 12
+1-1. training dataset
+   iteration_index (live) = 1     iteration_objective (live) = 3.718e-01
+   iteration_index (live) = 100   iteration_objective (live) = 8.570e-02
+   iteration_index (live) = 200   iteration_objective (live) = 3.061e-02
+   iteration_index (live) = 300   iteration_objective (live) = 1.918e-02
+   iteration_index (live) = 400   iteration_objective (live) = 1.603e-02
+   iteration_index (live) = 500   iteration_objective (live) = 1.463e-02
+   iteration_index (live) = 600   iteration_objective (live) = 1.373e-02
+   iteration_index (live) = 700   iteration_objective (live) = 1.307e-02
+   iteration_index (live) = 800   iteration_objective (live) = 1.256e-02
+   iteration_index (live) = 900   iteration_objective (live) = 1.216e-02
+   iteration_index (live) = 1000   iteration_objective (live) = 1.185e-02
+   iteration_index (live) = 1100   iteration_objective (live) = 1.161e-02
+   iteration_index (live) = 1200   iteration_objective (live) = 1.142e-02
+   iteration_index (live) = 1300   iteration_objective (live) = 1.127e-02
+   iteration_index (live) = 1400   iteration_objective (live) = 1.116e-02
+   iteration_index (live) = 1500   iteration_objective (live) = 1.106e-02
+   iteration_index (live) = 1600   iteration_objective (live) = 1.099e-02
+   iteration_index (live) = 1700   iteration_objective (live) = 1.093e-02
+   iteration_index (live) = 1800   iteration_objective (live) = 1.089e-02
+   iteration_index (live) = 1900   iteration_objective (live) = 1.085e-02
+   iteration_index (live) = 2000   iteration_objective (live) = 1.082e-02
+   iteration_index (live) = 2100   iteration_objective (live) = 1.080e-02
+   iteration_index (live) = 2200   iteration_objective (live) = 1.078e-02
+   iteration_index (live) = 2300   iteration_objective (live) = 1.076e-02
+   iteration_index (live) = 2400   iteration_objective (live) = 1.075e-02
+   iteration_index (live) = 2500   iteration_objective (live) = 1.074e-02
+   iteration_index (live) = 2600   iteration_objective (live) = 1.073e-02
+   iteration_index (live) = 2700   iteration_objective (live) = 1.072e-02
+   iteration_index (live) = 2800   iteration_objective (live) = 1.072e-02
+   iteration_index (live) = 2900   iteration_objective (live) = 1.071e-02
+   iteration_index (live) = 3000   iteration_objective (live) = 1.071e-02
+   elapsed time for finding rob-det-ctrl on traindata = 287 minutes and 15.702402 seconds
+2. save basline (robust deterministic control in matlab format)
+%---------- baseline: rob_det_ctrl using KLE_normal (end) ----------%
+
+
+%---------- rob_det_ctrl vs path_ctrl on training data (start) ----------%
+0. objective functional on training dataset: rob_det_ctrl vs path_ctrl
+   obj_func (rob_det)  obj_func (path)
+       1.071e-02        5.562e-04
+1. average target match and control cost: rob_det_ctrl vs path_ctrl
+   target match (rob_det)  target match (path)
+        1.369e-01                3.276e-02
+   control cost (rob_det)  control cost (path)
+        4.529e+01               4.849e+01
+2. target mismatch: rob_det_ctrl vs path_ctrl
+   index of coeff sample       1368        3129        2140        4407
+   target match (rob_det)    4.079e-01   3.874e-01   3.731e-01   3.685e-01
+   target match (path)       2.249e-02   2.486e-02   2.374e-02   2.500e-02
+   control cost (rob_det)    4.529e+01   4.529e+01   4.529e+01   4.529e+01
+   control cost (path)       3.388e+01   3.275e+01   3.734e+01   3.423e+01
+3. target match: rob_det_ctrl vs path_ctrl
+   index of coeff sample       4864        2846        2999        3372
+   target match (rob_det)    4.482e-02   4.357e-02   4.199e-02   3.615e-02
+   target match (path)       2.506e-02   2.886e-02   2.323e-02   2.273e-02
+   control cost (rob_det)    4.529e+01   4.529e+01   4.529e+01   4.529e+01
+   control cost (path)       4.584e+01   4.621e+01   4.461e+01   4.567e+01
+
+ Target Match for Traindata: coefficient index (worst case) for RobDetCtrl = 1368
+ Target Match for Traindata: coefficient index (best case) for RobDetCtrl = 3372
+%---------- rob_det_ctrl vs path_ctrl on training data (end) ----------%

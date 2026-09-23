@@ -1,0 +1,40 @@
+/opt/software/MATLAB/R2019a/bin/matlab:行1335: lsb_release: 未找到命令
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+                  R2019a (9.6.0.1072779) 64-bit (glnxa64)
+                               March 8, 2019
+
+ 
+要开始，请键入 doc。
+有关产品信息，请访问 www.mathworks.com。
+ 
+Starting parallel pool (parpool) using the 'local' profile ...
+Connected to the parallel pool (number of workers: 12).
+
+%---------- Simulation Results of the Trained Model (start) ----------%
+1. average target match and control cost: rob_det_ctrl vs rob_path_ctrl vs path_ctrl on testdata
+   target match (rob_det)  target match (rob_path)  target match (path)
+        1.351e-01                3.287e-02              3.261e-02
+   control cost (rob_det)  control cost (rob_path)  control cost (path)
+        4.529e+01               4.852e+01               4.848e+01
+2. target mismatch: rob_det_ctrl vs path_ctrl
+   index of coeff sample         137          214          454          929
+   target match (rob_det)    3.774e-01   3.690e-01   3.620e-01   3.472e-01
+   target match (rob_path)   2.863e-02   3.130e-02   2.830e-02   2.580e-02
+   target match (path)       2.778e-02   2.790e-02   2.758e-02   2.512e-02
+   control cost (rob_det)    4.529e+01   4.529e+01   4.529e+01   4.529e+01
+   control cost (rob_path)   3.354e+01   3.739e+01   3.931e+01   3.604e+01
+   control cost (path)       3.343e+01   3.724e+01   3.925e+01   3.593e+01
+3. target match: rob_det_ctrl vs path_ctrl
+   index of coeff sample         845          391          387          861
+   target match (rob_det)    4.475e-02   4.540e-02   4.555e-02   4.555e-02
+   target match (rob_path)   2.354e-02   3.058e-02   2.454e-02   2.038e-02
+   target match (path)       2.340e-02   3.033e-02   2.440e-02   2.014e-02
+   control cost (rob_det)    4.529e+01   4.529e+01   4.529e+01   4.529e+01
+   control cost (rob_path)   4.570e+01   4.523e+01   4.611e+01   4.709e+01
+   control cost (path)       4.566e+01   4.520e+01   4.603e+01   4.706e+01
+4. runtime:   rob_det_ctrl vs rob_path_ctrl vs path_ctrl
+   (offline)    1.724e+04       2.587e+04      0.000e+00
+   (online)     0.000e+00       6.200e-01      4.595e+03
+%---------- Simulation Results of the Trained Model (end) ----------%
