@@ -13,17 +13,17 @@ A data-driven training algorithm is first established to learn the mapping from 
 
 ## 🛠️ Prerequisites 
 
-**MATLAB** is required for dataset generation (Karhunen-Loève Expansion), classical optimal control solvers, et al. Neural operators are implemented in **PyTorch** and optimized for an **NVIDIA GeForce RTX 4090 GPU Cards**. 
+**MATLAB** is required for dataset generation (Karhunen-Loève Expansion, classical optimal control solvers, et al）. Neural operators are implemented in **PyTorch** and optimized for an **NVIDIA GeForce RTX 4090 GPU Cards**. 
 
 ## 🚀 Repository Structure
 
 The codebase is organized into Supervised/Data-Driven and Unsupervised/Physics-Informed Learning directories:
 
-* **Supervised Learning (`RpCtrl-SL-*`)**: Data-driven robust-pathwise control evaluated under correlation lengths of $\ell = 0.2$ and $\ell = 0.08$:
-  * `RpCtrl-SL-l2e-1/` — Configuration for $\ell = 0.2$.
-  * `RpCtrl-SL-l8e-2/` — Configuration for $\ell = 0.08$.
-* **Unsupervised Learning (`RpCtrl-unSL-*`)**: Physics-informed robust-pathwise control utilizing adjoint-based control updates:
-  * `RpCtrl-unSL-l2e-1/` — Evaluated under a correlation length of $\ell = 0.2$ for direct comparison with the supervised learning framework.
+* **Supervised Learning**: Data-driven robust-pathwise control evaluated under correlation lengths of $\ell = 0.2$ and $\ell = 0.08$:
+  * `RpCtrl-SL-l2e-1/` 
+  * `RpCtrl-SL-l8e-2/` 
+* **Unsupervised Learning**: Physics-informed robust-pathwise control evaluated under a correlation length of $\ell = 0.2$ for comparison:
+  * `RpCtrl-unSL-l2e-1/`
 
 ### Sub-directory Details (e.g., `RpCtrl-SL-l2e-1`)
 
