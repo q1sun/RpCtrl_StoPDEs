@@ -22,7 +22,7 @@ The codebase is organized into Supervised/Data-Driven and Unsupervised/Physics-I
 * **Supervised Learning**: Data-driven robust-pathwise control evaluated under correlation lengths of $\ell = 0.2$ and $\ell = 0.08$:
   * `RpCtrl-SL-l2e-1/` 
   * `RpCtrl-SL-l8e-2/` 
-* **Unsupervised Learning**: Physics-informed robust-pathwise control evaluated for comparison with the supervised learning:
+* **Unsupervised Learning**: Physics-informed robust-pathwise control evaluated for comparison with data-driven model:
   * `RpCtrl-unSL-l2e-1/`
 
 ### Sub-directory Details (e.g., `RpCtrl-SL-l2e-1`)
