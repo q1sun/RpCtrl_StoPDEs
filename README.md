@@ -13,14 +13,16 @@ A data-driven training algorithm is first established to learn the mapping from 
 
 ## 🧠 Neural Operator Architectures
 
-This codebase implements and evaluates several neural network architectures for learning the optimal control mappings:
+This codebase evaluates several neural network architectures for learning the optimal control mappings:
 * **U-Net**
 * **DeepONet**
 * **Fourier Neural Operator (FNO)**
 
 ## 🛠️ Prerequisites & Hardware
 
-The neural network training framework is implemented in **PyTorch**. Scripts are configured and benchmarked for execution on an **NVIDIA GeForce RTX 4090 GPU**. Post-processing scripts (including kernel density estimation and log-scale performance distribution plots) require **MATLAB**.
+The neural network training framework is implemented in **PyTorch** and optimized for an **NVIDIA GeForce RTX 4090 GPU**. 
+
+**MATLAB** is required for dataset generation (Karhunen-Loève Expansion, KLE), conventional optimal control solver setup, checkpoint evaluation, and generating performance distribution plots (utilizing kernel density estimation, log-scale axis transformations, and percentage formatting).
 
 ### Python Dependencies
 ```bash
