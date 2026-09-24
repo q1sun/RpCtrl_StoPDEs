@@ -36,5 +36,5 @@ Each configuration directory contains the complete pipeline from data generation
 * **Core Pipeline Scripts:**
   * `setup_KLE_normal.m` - MATLAB script to generate training data pairs.
   * `train_KLE_normal.py` - PyTorch script for training neural operators.
-  * `train_KLE_normal.m` - MATLAB script to evaluate saved checkpoints and identify the best-performing model.
-  * `test_KLE_normal.m` - MATLAB script to evaluate the best model on the test dataset and compare against the robust deterministic control.
+  * `train_KLE_normal.m` - MATLAB script to identify the best-performing model.
+  * `test_KLE_normal.m` - MATLAB script for model evaluation on the test dataset and comparison against robust deterministic control.
