@@ -19,10 +19,10 @@ A data-driven training algorithm is first established to learn the mapping from 
 
 The codebase is organized into Supervised/Data-Driven and Unsupervised/Physics-Informed Learning directories:
 
-* **Supervised Learning**: Data-driven robust-pathwise control evaluated under correlation lengths of $\ell = 0.2$ and $\ell = 0.08$:
+* **Supervised Learning**: Data-driven robust-pathwise control with correlation lengths of $\ell = 0.2$ and $\ell = 0.08$:
   * `RpCtrl-SL-l2e-1/` 
   * `RpCtrl-SL-l8e-2/` 
-* **Unsupervised Learning**: Physics-informed robust-pathwise control evaluated for comparison with data-driven models:
+* **Unsupervised Learning**: Physics-informed robust-pathwise control compared against the data-driven models:
   * `RpCtrl-unSL-l2e-1/`
 
 ### Sub-directory Details (e.g., `RpCtrl-SL-l2e-1`)
@@ -32,7 +32,7 @@ Each configuration directory contains the complete pipeline from data generation
 * `Checkpoints/` - Directory to store trained PyTorch model weights and control predictions.
 * `Data/` - Directory containing the generated coefficient realizations and target pathwise optimal controls.
 * `Figures/` - Directory for saving output visualization plots.
-* `Models/` - PyTorch implementations of robust deterministic control, pathwise control, and robust-pathwise control.
+* `Models/` - Matlab/PyTorch codes for robust deterministic control, pathwise control, and robust-pathwise control.
 * **Core Pipeline Scripts:**
   * `setup_KLE_normal.m` - MATLAB script to generate training data pairs.
   * `train_KLE_normal.py` - PyTorch script for training neural operators.
