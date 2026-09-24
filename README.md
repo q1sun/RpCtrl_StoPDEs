@@ -17,13 +17,13 @@ A data-driven training algorithm is first established to learn the mapping from 
 
 ## 🚀 Repository Structure
 
-The codebase is organized into Supervised Learning (SL) and Unsupervised/Physics-Informed Learning (unSL) directories:
+The codebase is organized into Supervised/Data-Driven and Unsupervised/Physics-Informed Learning directories:
 
-* **Supervised Learning (`RpCtrl-SL-*`)**: Contains the data-driven training algorithms.
-  * `RpCtrl-SL-l2e-1/`
-  * `RpCtrl-SL-l8e-2/`
-* **Unsupervised Learning (`RpCtrl-unSL-*`)**: Contains the weakly supervised (physics-informed) training algorithms utilizing adjoint-based control updates.
-  * `RpCtrl-unSL-l2e-1/`
+* **Supervised Learning (`RpCtrl-SL-*`)**: Data-driven robust-pathwise control evaluated under correlation lengths of $\ell = 0.2$ and $\ell = 0.08$:
+  * `RpCtrl-SL-l2e-1/` — Configuration for $\ell = 0.2$.
+  * `RpCtrl-SL-l8e-2/` — Configuration for $\ell = 0.08$.
+* **Unsupervised Learning (`RpCtrl-unSL-*`)**: Physics-informed robust-pathwise control utilizing adjoint-based control updates:
+  * `RpCtrl-unSL-l2e-1/` — Evaluated under a correlation length of $\ell = 0.2$ for direct comparison with the supervised learning framework.
 
 ### Sub-directory Details (e.g., `RpCtrl-SL-l2e-1`)
 
