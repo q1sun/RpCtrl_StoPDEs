@@ -22,23 +22,19 @@ The codebase is organized into Supervised/Data-Driven and Unsupervised/Physics-I
 * **Supervised Learning**: Data-driven robust-pathwise control evaluated under correlation lengths of $\ell = 0.2$ and $\ell = 0.08$:
   * `RpCtrl-SL-l2e-1/` 
   * `RpCtrl-SL-l8e-2/` 
-* **Unsupervised Learning**: Physics-informed robust-pathwise control evaluated for comparison with data-driven model:
+* **Unsupervised Learning**: Physics-informed robust-pathwise control evaluated for comparison with data-driven models:
   * `RpCtrl-unSL-l2e-1/`
 
 ### Sub-directory Details (e.g., `RpCtrl-SL-l2e-1`)
 
 Each configuration directory contains the complete pipeline from data generation to model testing:
 
-* `Checkpoints/` - Directory to store trained PyTorch model weights.
-* `Data/` - Directory containing the generated input coefficient fields and target pathwise optimal controls.
+* `Checkpoints/` - Directory to store trained PyTorch model weights and control predictions.
+* `Data/` - Directory containing the generated coefficient realizations and target pathwise optimal controls.
 * `Figures/` - Directory for saving output visualization plots.
-* `Models/` - PyTorch implementations of the neural operator architectures.
+* `Models/` - PyTorch implementations of robust deterministic control, pathwise control, and robust-pathwise control.
 * **Core Pipeline Scripts:**
-  * `setup_KLE_normal.m` - MATLAB script to generate training data and target pathwise controls.
-  * `train_KLE_normal.py` - PyTorch script for training the neural operator models.
+  * `setup_KLE_normal.m` - MATLAB script to generate training data pairs.
+  * `train_KLE_normal.py` - PyTorch script for training neural operators.
   * `train_KLE_normal.m` - MATLAB script to evaluate saved checkpoints and identify the best-performing model.
-  * `test_KLE_normal.m` - MATLAB script to evaluate the best model on the test dataset and compare results against benchmark robust deterministic controls.
-* **Execution Wrappers:**
-  * `run_setup.sh`, `run_train.sh`, `run_test.sh` - Bash scripts wrapping the pipeline steps.
-* **Configuration Files:**
-  * `RpCtrl-setup-s1e2.txt`, `RpCtrl-train-s1e2.txt`, `RpCtrl-test-s1e2.txt` - Configuration parameters (e.g., sample sizes, network hyper-parameters).
+  * `test_KLE_normal.m` - MATLAB script to evaluate the best model on the test dataset and compare results against benchmark robust deterministic control.
