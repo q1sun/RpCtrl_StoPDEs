@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org/)
 
-This repository (`q1sun/RpCtrl_StoPDEs`) contains the official code implementation for the paper **"Learning Optimal Robust-Pathwise Control of Elliptic Equations with Random Coefficients"**. 
+This repository (`q1sun/RpCtrl_StoPDEs`) contains our code implementation for the paper **"Learning Optimal Robust-Pathwise Control of Elliptic Equations with Random Coefficients"**. 
 
 ## 📖 Abstract
 
@@ -11,20 +11,34 @@ Conventional control approaches to optimization problems under uncertainty entai
 
 A data-driven training algorithm is first established to learn the mapping from coefficient realizations directly to their optimal pathwise controls. To bypass the burden of generating training data pairs, a physics-informed training algorithm is then proposed and recast as weakly supervised learning using pseudo label targets produced by standard adjoint-based control updates. Numerical experiments with rough coefficients are conducted to validate the effectiveness and efficiency of our robust-pathwise controls, which outperforms the benchmark robust deterministic control on unseen coefficient realizations owing to the generalization capability and fast inference of trained models.
 
-## 🧠 Neural Operator Architectures
+## 🛠️ Prerequisites 
 
-This codebase evaluates several neural network architectures for learning the optimal control mappings:
-* **U-Net**
-* **DeepONet**
-* **Fourier Neural Operator (FNO)**
+**MATLAB** is required for dataset generation (Karhunen-Loève Expansion), classical optimal control solvers, et al. Neural operators are implemented in **PyTorch** and optimized for an **NVIDIA GeForce RTX 4090 GPU Cards**. 
 
-## 🛠️ Prerequisites & Hardware
+## 🚀 Repository Structure
 
-The neural network training framework is implemented in **PyTorch** and optimized for an **NVIDIA GeForce RTX 4090 GPU**. 
+The codebase is organized into Supervised Learning (SL) and Unsupervised/Physics-Informed Learning (unSL) directories:
 
-**MATLAB** is required for dataset generation (Karhunen-Loève Expansion, KLE), conventional optimal control solver setup, checkpoint evaluation, and generating performance distribution plots (utilizing kernel density estimation, log-scale axis transformations, and percentage formatting).
+* **Supervised Learning (`RpCtrl-SL-*`)**: Contains the data-driven training algorithms.
+  * `RpCtrl-SL-l2e-1/`
+  * `RpCtrl-SL-l8e-2/`
+* **Unsupervised Learning (`RpCtrl-unSL-*`)**: Contains the weakly supervised (physics-informed) training algorithms utilizing adjoint-based control updates.
+  * `RpCtrl-unSL-l2e-1/`
 
-### Python Dependencies
-```bash
-pip install torch torchvision
-pip install numpy scipy matplotlib
+### Sub-directory Details (e.g., `RpCtrl-SL-l2e-1`)
+
+Each configuration directory contains the complete pipeline from data generation to model testing:
+
+* `Checkpoints/` - Directory to store trained PyTorch model weights.
+* `Data/` - Directory containing the generated input coefficient fields and target pathwise optimal controls.
+* `Figures/` - Directory for saving output visualization plots.
+* `Models/` - PyTorch implementations of the neural operator architectures.
+* **Core Pipeline Scripts:**
+  * `setup_KLE_normal.m` - MATLAB script to generate training data and target pathwise controls.
+  * `train_KLE_normal.py` - PyTorch script for training the neural operator models.
+  * `train_KLE_normal.m` - MATLAB script to evaluate saved checkpoints and identify the best-performing model.
+  * `test_KLE_normal.m` - MATLAB script to evaluate the best model on the test dataset and compare results against benchmark robust deterministic controls.
+* **Execution Wrappers:**
+  * `run_setup.sh`, `run_train.sh`, `run_test.sh` - Bash scripts wrapping the pipeline steps.
+* **Configuration Files:**
+  * `RpCtrl-setup-s1e2.txt`, `RpCtrl-train-s1e2.txt`, `RpCtrl-test-s1e2.txt` - Configuration parameters (e.g., sample sizes, network hyper-parameters).
