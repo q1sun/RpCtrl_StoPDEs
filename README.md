@@ -1,6 +1,7 @@
 # Learning Optimal Robust-Pathwise Control of Elliptic Equations with Random Coefficients
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=flat&logo=mathworks&logoColor=white)](https://www.mathworks.com/products/matlab.html)
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org/)
 
 This repository (`q1sun/RpCtrl_StoPDEs`) contains our code implementation for the paper **"Learning Optimal Robust-Pathwise Control of Elliptic Equations with Random Coefficients"**. 
