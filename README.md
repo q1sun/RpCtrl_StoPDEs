@@ -4,7 +4,7 @@
 [![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=flat&logo=mathworks&logoColor=white)](https://www.mathworks.com/products/matlab.html)
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org/)
 
-This repository (`q1sun/RpCtrl_StoPDEs`) contains our code implementation for the paper **"Learning Optimal Robust-Pathwise Control of Elliptic Equations with Random Coefficients"**. 
+This repository (`q1sun/RpCtrl_StoPDEs`) contains the code implementation for our paper **"Learning Optimal Robust-Pathwise Control of Elliptic Equations with Random Coefficients"**. 
 
 ## 📖 Abstract
 
@@ -14,7 +14,7 @@ A data-driven training algorithm is first established to learn the mapping from 
 
 ## 🛠️ Prerequisites 
 
-**MATLAB** is required for dataset generation (Karhunen-Loève Expansion, classical optimal control solvers, et al）. Neural operators are implemented in **PyTorch** and optimized for an **NVIDIA GeForce RTX 4090 GPU Cards**. 
+**MATLAB** is required for dataset generation (Karhunen-Loève Expansion, classical optimal control solvers, et al). Neural operators are implemented in **PyTorch** and optimized for an **NVIDIA GeForce RTX 4090 GPU Cards**. 
 
 ## 🚀 Repository Structure
 
